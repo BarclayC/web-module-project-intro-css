@@ -1,133 +1,244 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,
-big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,
-dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,
-details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
-
-html {
-  font-size: 62.5%;
-  font-family: "Roboto Mono", monospace;
+}
+* {
+    box-sizing: border-box;
 }
 
+.header_container {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+section {
+    margin: 0 auto;
+    width: 60%;
+}
+
+body {
+    height: auto;
+    margin: 0;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+/* Additional Content in about section*/
+h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 36px;
+}
+
+header {
+    padding: 2.5em;
+    margin: 0 auto;
+}
+
+/* Navigation */
 nav {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  word-wrap: break-word;
+    margin: auto;
 }
 
-nav {
-  transition: transform 0.2s;
+nav ul {
+    list-style: none;
 }
 
-nav:hover {
-  transform: scale(1);
+nav li {
+    display: inline;
+    padding: 1em;
 }
 
-nav a {
-  margin: 1%;
-  font-size: 1.5rem;
-  border-radius: 1rem;
-  padding: 1rem;
-  color: #ffffff;
-  text-decoration: none;
-  width: 12rem;
-  text-align: center;
+nav li a {
+    text-decoration: none;
+    margin-top: 2em;
+    border-radius: 10px;
 }
 
-nav a:first-child {
-  background-color: #ff764e;
+.plan {
+    background-color: #FF764E;
+    color: white;
+    padding: 1rem;
+
 }
 
-nav a:nth-child(2) {
-  background-color: #5ed3eb;
+.learn {
+    background-color: #5ED3EB;
+    color: white;
+    padding: 1rem;
+
 }
 
-nav a:last-child {
-  background-color: #ffcd69;
+.get {
+    background-color: #FFCD69;
+    color: white;
+    padding: 1rem;
+}
+/* Stretch Goal: Added Hover Animation */
+.plan:hover {
+    background-color:white;
+    color: #FF764E;
+    border: 1px solid #FF764E;
+}
+.learn:hover {
+    background-color:white;
+    color: #5ED3EB;
+    border: 1px solid #5ED3EB;
+}
+.get:hover {
+    background-color:white;
+    color: #FFCD69;
+    border: 1px solid #FFCD69;
 }
 
-.header {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 5.5rem;
+/* End Navigation */
+/* Circular Image Container & About Text */
+.about {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em 15em;
+
+
 }
 
-.header img {
-  width: 20%;
-  border-radius: 50%;
+.image_container {
+    margin: 0 3em;
+    height: 18em;
+    float: left;
+    width: 40%;
+    display: block;
+
 }
 
-.header h1 {
-  font-size: 7rem;
-  font-family: "Chelsea Market";
-  white-space: nowrap;
-  display: flex;
-  justify-content: center;
+.image_container img {
+    border-radius: 50%;
+    width: 30vh;
+    height: auto;
+    padding: 1em;
+
 }
 
-.header-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.5rem;
-  width: 30rem;
-  padding: 1rem;
+.about_content {
+    margin: 1em .25em;
+    padding: 0 2em;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    line-height: 5rem;
+
 }
 
-.history {
-  background-color: #ddb9a3;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 10rem;
-  margin: 0 auto;
-  width: 70%;
-  font-size: 1.5rem;
-  padding: 1rem;
-  text-align: center;
+.para2 {
+    line-height: normal;
+    width: 85%;
 }
 
-.travel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#fireimg,
+#vanimg {
+    padding: 3%;
+    height: 120px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1.5em;
 }
 
-.travel div {
-  text-align: center;
-  padding: 3rem;
+#section2 {
+    height: 30%;
+    color: white;
+    background-color: #DDB9A3;
+    width: 60%;
+    padding: .5em 1.5em;
+    margin: auto;
+    margin-top: 7em;
+    text-align: center;
+    font-size: 13px;
+}
+#section2 h3{
+    text-align: center;
+}
+#section2 h2{
+    text-align: center;
+}
+#section2 a {
+    color: #FF764E;
+}
+#section2 a:hover {
+    text-decoration: none;
+    color: #FF764E;
+    font-weight: bolder;
+
 }
 
-.travel div img {
-  width: 10rem;
+#link1 {
+    background-color: #FF764E;
+
 }
 
-.travel p {
-  width: 40rem;
+#link2 {
+    background-color: #5ED3EB;
+}
+
+#link3 {
+    background-color: #FFCD69;
+
+}
+
+#section3,
+#section4 {
+    width: 20%;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 5em;
+    font-size: 13px;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 footer {
-  background-color: #f9e7dc;
+    width: 100%;
+    text-align: center;
+    background-color: #F9E7DC;
+
 }
 
-footer img {
-  width: 100%;
-  height: 30rem;
+footer nav {
+    padding: 1em;
+    height: 100px;
+    margin-top: 3em;
+}
+
+#footerimg {
+    width: 100%;
+    height: 20rem;
+
 }
